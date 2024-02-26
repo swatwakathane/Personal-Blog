@@ -38,6 +38,7 @@
     appearance: 0;
     list-style: none;
     text-decoration: none;
+    box-sizing: border-box;
 }
 
 body {
@@ -239,6 +240,7 @@ nav button {
 
 .posts__container {
     display: grid;
+    margin-top: 2rem;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
     margin-bottom: 5rem;
@@ -388,6 +390,86 @@ footer ul a:hover {
     margin: 1.5rem 0 1rem;
 }
 
+ /* ---------------------------------------- CATEGORY POST BODY ----------------------------------- */
+
+
+.category__title {
+    height: 10rem;
+    margin-top: 4.5rem;
+    background: var(--color-gray-900);
+    display: grid;
+    place-items: center;
+}
+
+ /* ---------------------------------------- ABOUT PAGE ----------------------------------- */
+
+.empty__page {
+    height: 10rem;
+    margin-top: 4.5rem;
+    display: grid;
+    place-items: center;
+}
+
+ /* ---------------------------------------- SIGN UP ----------------------------------- */
+
+.form__section {
+    display: grid;
+    place-items: center;
+    height: 100hv;
+}
+
+.form__section-container {
+    width: var(--form-width);
+    margin-bottom: 2rem;
+}
+
+.alert__message {
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: var(--card-border-radius-2);
+}
+
+.alert__message.error {
+    background: var(--color-red-light);
+    color: var(--color-red);
+}
+
+.alert__message.success {
+    background: var(--color-green-light);
+    color: var(--color-green);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form__control {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+input, textarea, select {
+    padding: 0.8rem 1.4rem;
+    background-color: var(--color-gray-900);
+    border-radius: var(--card-border-radius-2);
+    resize: none;
+    color: var(--color-white);
+}
+
+.form__section small {
+    margin-top: 1rem;
+    display: block;
+}
+
+.form__section small a {
+    color: var(--color-primary);
+}
+
+
+
  /* ---------------------------------------- RESPONSIVE - MEDIUM DEVICES ----------------------------------- */
 
 
@@ -505,6 +587,12 @@ footer ul a:hover {
     .search__bar-container {
         width: 60%;
     }
+
+    /* ------------------------------------------------------  SIGN UP ------------------------------------------- */
+    .form__section-container {
+        padding: 3rem;
+    }
+
 }
 
  /* ---------------------------------------- RESPONSIVE - SMALL DEVICES ----------------------------------- */
@@ -551,6 +639,12 @@ footer ul a:hover {
 
     .singlepost__container {
         padding: 1rem;
+    }
+
+        /* ------------------------------------------------------ SIGN UP ------------------------------------------- */
+
+    .form__section-container {
+        padding: 0;
     }
 
 }
