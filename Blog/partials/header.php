@@ -9,7 +9,7 @@ require 'config/database.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SWAT Blog</title>
     <!-- linking to stylesheet -->
-    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="<?= ROOT_URL ?>css/style2.css">
     <!-- ------------------- font awesome -----------------  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
     <!-- ------------------- GOOGLE FONTS ---------------- -->
@@ -19,7 +19,7 @@ require 'config/database.php';
     <!-- ---------------- Navigation Panel ------------------------ -->
     <nav>
         <div class="container nav__container">
-            <a href="./index2.php" class="nav__logo">S.W.A.T blog</a>
+            <a href="<?= ROOT_URL?>index2.php" class="nav__logo">S.W.A.T blog</a>
             <ul class="nav__items">
                 <li><a href="<?= ROOT_URL ?>blog.php">Blog</a></li>
                 <li><a href="<?= ROOT_URL ?>about.php">About</a></li>
@@ -31,8 +31,8 @@ require 'config/database.php';
                         <img src="images/avatar1.jpg" alt="">
                     </div>
                     <ul>
-                        <li><a href="<?= ROOT_URL ?>admin/dashboard.html">Dashboard</a></li>
-                        <li><a href="<?= ROOT_URL ?>logout.html">Logout</a></li>
+                        <li><a href="<?= ROOT_URL ?>admin/index.php">Dashboard</a></li>
+                        <li><a href="logout.php">Logout</a></li>
                     </ul>
                 </li>
             </ul>
