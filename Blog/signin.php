@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SWAT Blog</title>
     <!-- linking to stylesheet -->
-    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="css/style2.css">
     <!-- ------------------- font awesome -----------------  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
     <!-- ------------------- GOOGLE FONTS ---------------- -->
@@ -23,7 +23,7 @@
             <input type="text" placeholder="Username or Email">
             <input type="password" placeholder="Password">
             <button type="submit" class="btn">Sign In</button>
-            <small>Dont have an Account! <a href="signup.html">Sign Up</a></small>
+            <small>Dont have an Account! <a href="signup.php">Sign Up</a></small>
         </form>
     </div>
 </section>
