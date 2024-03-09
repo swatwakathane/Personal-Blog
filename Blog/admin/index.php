@@ -49,20 +49,20 @@ include 'partials/header.php';
                     <tr>
                         <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
                         <td>Art </td>
-                        <td><a href="edit-post.html" class="btn sm">Edit</a></td>
-                        <td><a href="delete-user.html" class="btn sm danger">Delete</a></td>
+                        <td><a href="edit-post.php" class="btn sm">Edit</a></td>
+                        <td><a href="delete-user.php" class="btn sm danger">Delete</a></td>
                     </tr>
                     <tr>
                         <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
                         <td>Art </td>
-                        <td><a href="edit-post.html" class="btn sm">Edit</a></td>
-                        <td><a href="delete-user.html" class="btn sm danger">Delete</a></td>
+                        <td><a href="edit-post.php" class="btn sm">Edit</a></td>
+                        <td><a href="delete-user.php" class="btn sm danger">Delete</a></td>
                     </tr>
                     <tr>
                         <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
                         <td>Art </td>
-                        <td><a href="edit-post.html" class="btn sm">Edit</a></td>
-                        <td><a href="delete-user.html" class="btn sm danger">Delete</a></td>
+                        <td><a href="edit-post.php" class="btn sm">Edit</a></td>
+                        <td><a href="delete-user.php" class="btn sm danger">Delete</a></td>
                     </tr>
                     
                 </tbody>
