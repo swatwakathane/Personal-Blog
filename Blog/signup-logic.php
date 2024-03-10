@@ -32,10 +32,44 @@ if(isset($_POST['submit'])){
             // hash password
             $hashed_password = password_hash($createpassword, PASSWORD_DEFAULT);
             
+            //check for username already existed in database
+            $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email'";
+            $user_check_result = mysqli_query($connection, $user_check_query);
+            if(mysqli_num_rows($user_check_result) > 0){
+                $_SESSION['signup '] = "Username or Email Already Exist";
+            }
+            else {
+                // Rename avatar
+                $time = time();
+                $avatar_name = $time . $avatar['name'];
+                $avatar_tmp_name = $avatar['tmp_name'];
+                $avatar_destination_path = 'images/' . $avatar_name;
+
+                // check if file is an image
+                $allowed_files = ['png', 'jpg', 'jpeg'];
+                $extension = explode('.', $avatar_name);
+                $extension = end($extension);
+
+                if(in_array($extension, $allowed_files)) {
+                    // make sure that image is not too large i.e 1mb
+                    if($avatar['size'] < 1000000){
+                        //upload successful
+                        move_uploaded_file($avatar_tmp_name, $avatar_destination_path);
+                    }
+                    else{
+                        $_SESSION['signup'] = "File size should be less than 1mb";
+                    }
+                }
+                else{
+                    $_SESSION['signup'] = "File should be png, jpg, or jpeg";
+                }
+            }
         }
     }
+    // redirect if any error occurs 
 }
 else{
+    // if button is not set the bounce back to signup page
     header('location: ' . ROOT_URL . 'signup.php');
     die();
 }
