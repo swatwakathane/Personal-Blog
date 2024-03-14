@@ -1,5 +1,12 @@
 <?php
 require 'config/database.php';
+
+if(isset($_SESSION['user-id'])) {
+    $id = filter_var($_SESSION['user-id'], FILTER_SANITIZE_NUMBER_INT);
+    $query = "SELECT avatar FROM users WHERE id=$id";
+    $result = mysqli_query($connection, $query);
+    $avatar = mysqli_fetch_assoc($result);
+}
 ?>
 
 <!DOCTYPE html>
@@ -19,22 +26,25 @@ require 'config/database.php';
     <!-- ---------------- Navigation Panel ------------------------ -->
     <nav>
         <div class="container nav__container">
-            <a href="<?= ROOT_URL?>index2.php" class="nav__logo">S.W.A.T blog</a>
+            <a href="<?= ROOT_URL?>index.php" class="nav__logo">S.W.A.T blog</a>
             <ul class="nav__items">
                 <li><a href="<?= ROOT_URL ?>blog.php">Blog</a></li>
                 <li><a href="<?= ROOT_URL ?>about.php">About</a></li>
                 <li><a href="<?= ROOT_URL ?>service.php">Services</a></li>
                 <li><a href="..\index.html#contact" target="_blank">Contact</a></li>
-                <li><a href="<?= ROOT_URL ?>signin.php" target="_blank">Sign In</a></li>
-                <!-- <li class="nav__profile">
+                <?php if(isset($_SESSION['user-id'])) : ?>
+                    <li class="nav__profile">
                     <div class="avatar">
-                        <img src="images/avatar1.jpg" alt="">
+                        <img src="<?= ROOT_URL . 'images/' . $avatar['avatar'] ?>">
                     </div>
                     <ul>
                         <li><a href="<?= ROOT_URL ?>admin/index.php">Dashboard</a></li>
                         <li><a href="logout.php">Logout</a></li>
                     </ul>
-                </li> -->
+                </li>
+                <?php else : ?>
+                    <li><a href="<?= ROOT_URL ?>signin.php" target="_blank">Sign In</a></li>
+                <?php endif ?>
             </ul>
             <button id="open__nav-btn"><i class="fa-solid fa-bars"></i></button>
             <button id="close__nav-btn"><i class="fa-solid fa-x"></i></button>

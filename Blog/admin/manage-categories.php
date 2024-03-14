@@ -16,7 +16,10 @@ include 'partials/header.php';
                     <h5>Manage posts</h5>
                     </a>
                 </li>
-                <li><a href="add-user.php"><i class="fa-solid fa-user"></i>
+
+                <?php if(isset($_SESSION['user_is_admin'])) : ?>
+                
+                    <li><a href="add-user.php"><i class="fa-solid fa-user"></i>
                     <h5>Add User</h5>
                     </a>
                 </li>
@@ -32,6 +35,7 @@ include 'partials/header.php';
                     <h5>Manage Categories</h5>
                     </a>
                 </li>
+                <?php endif ?>
             </ul>
         </aside>
         <main>

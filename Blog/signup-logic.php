@@ -36,7 +36,7 @@ if(isset($_POST['submit'])){
             $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email'";
             $user_check_result = mysqli_query($connection, $user_check_query);
             if(mysqli_num_rows($user_check_result) > 0){
-                $_SESSION['signup '] = "Username or Email Already Exist";
+                $_SESSION['signup'] = "Username or Email Already Exist";
             }
             else {
                 // Rename avatar

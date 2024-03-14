@@ -11,7 +11,7 @@ include 'partials/header.php';
             </div>
             <div class="post__info">
                 <a href="" class="category__button">Wilf Life</a>
-                <h2 class="post__title"><a href="post.html">Lorem ipsum dolor sit amet, 
+                <h2 class="post__title"><a href="post.php">Lorem ipsum dolor sit amet, 
                     consectetur adipisicing elit. Veniam?</a></h2>
                 <p class="post__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, saepe. Voluptate laboriosam tempora dolorum minima perspiciatis necessitatibus magni laborum praesentium optio velit, rem iure alias facere laudantium accusamus reprehenderit suscipit.</p>
                 <div class="post__author">
