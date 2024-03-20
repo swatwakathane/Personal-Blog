@@ -39,7 +39,7 @@ if(isset($_SESSION['user-id'])) {
                     </div>
                     <ul>
                         <li><a href="<?= ROOT_URL ?>admin/index.php">Dashboard</a></li>
-                        <li><a href="logout.php">Logout</a></li>
+                        <li><a href="<?= ROOT_URL ?>logout.php">Logout</a></li>
                     </ul>
                 </li>
                 <?php else : ?>
