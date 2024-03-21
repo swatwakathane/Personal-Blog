@@ -8,7 +8,7 @@ $users = mysqli_query($connection, $query);
 ?>
 
 <section class="dashboard">
-<?php if(isset($_SESSION['add-user-success'])) : ?>
+    <?php if(isset($_SESSION['add-user-success'])) : // if add user is successful?> 
             <div class="alert__message success container">
                 <p>
                     <?= $_SESSION['add-user-success'];
@@ -16,7 +16,39 @@ $users = mysqli_query($connection, $query);
                     ?>
                 </p>
             </div>
-        <?php endif ?>
+    <?php elseif(isset($_SESSION['edit-user-success'])) : // if edit user is successful?>
+        <div class="alert__message success container">
+            <p>
+                <?= $_SESSION['edit-user-success'];
+                unset($_SESSION['edit-user-success']); 
+                ?>
+            </p>
+            </div>
+    <?php elseif(isset($_SESSION['edit-user'])) : // if edit user is NOT successful?>
+        <div class="alert__message error container">
+            <p>
+                <?= $_SESSION['edit-user'];
+                unset($_SESSION['edit-user']); 
+                ?>
+            </p>
+            </div>
+    <?php elseif(isset($_SESSION['delete-user'])) : // if delete user is NOT successful?>
+        <div class="alert__message error container">
+            <p>
+                <?= $_SESSION['delete-user'];
+                unset($_SESSION['delete-user']); 
+                ?>
+            </p>
+            </div>
+    <?php elseif(isset($_SESSION['delete-user-success'])) : // if delete user is successful?>
+        <div class="alert__message success container">
+            <p>
+                <?= $_SESSION['delete-user-success'];
+                unset($_SESSION['delete-user-success']); 
+                ?>
+            </p>
+            </div>
+    <?php endif ?>
 
     <div class="container dashboard__container">
         <button id="show__sidebar-btn" class="sidebar__toggle"><i class="fa-solid fa-angle-right"></i></button>
