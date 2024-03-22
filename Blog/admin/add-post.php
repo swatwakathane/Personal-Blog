@@ -15,7 +15,7 @@ $categories = mysqli_query($connection, $query)
             <input type="text" name="title" placeholder="Title">
             <select name="category">
                 <?php while($category = mysqli_fetch_assoc($categories)) : ?>
-                <option value="<?= $category['id'] ?>"><?= $category['title'] ?></option>
+                <option value="<?= $category['id'] ?>"> <?= $category['title'] ?></option>
                 <?php endwhile ?>
             </select>
             <textarea rows="10" name="body" placeholder="Post Body"></textarea>
