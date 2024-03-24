@@ -43,7 +43,7 @@ if(isset($_SESSION['user-id'])) {
                     </ul>
                 </li>
                 <?php else : ?>
-                    <li><a href="<?= ROOT_URL ?>signin.php" target="_blank">Sign In</a></li>
+                    <li><a href="<?= ROOT_URL ?>signin.php">Sign In</a></li>
                 <?php endif ?>
             </ul>
             <button id="open__nav-btn"><i class="fa-solid fa-bars"></i></button>

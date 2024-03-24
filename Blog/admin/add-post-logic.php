@@ -14,11 +14,11 @@ if (isset($_POST['submit'])) {
 
     // validate form data
     if (!$title) {
-        $_SESSION['add-post'] = "Enter valid title for post";
+        $_SESSION['add-post'] = "Enter valid title for blog";
     } elseif (!$category_id) {
         $_SESSION['add-post'] = "Select category for blog";
     } elseif (!$body) {
-        $_SESSION['add-post'] = "Please write Genuine content";
+        $_SESSION['add-post'] = "Please write some content";
     } elseif (!$thumbnail['name']) {
         $_SESSION['add-post'] = "Please upload thumbnail";
     } else {
@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
         $result = mysqli_query($connection, $query);
 
         if (!mysqli_errno($connection)) {
-            $_SESSION['add-post-success'] = "New post added successfully";
+            $_SESSION['add-post-success'] = "New Blog added successfully";
             header('location: ' . ROOT_URL . 'admin/');
             die();
         }
