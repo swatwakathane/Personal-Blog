@@ -38,7 +38,7 @@ $posts = mysqli_query($connection, $query);
                 ?>
             </p>
         </div>
-<?php elseif (isset($_SESSION['delete-post-success'])) : // if edit post is not successful
+<?php elseif (isset($_SESSION['delete-post-success'])) : // if delete post is successful
     ?>
         <div class="alert__message success container">
             <p>
@@ -47,7 +47,7 @@ $posts = mysqli_query($connection, $query);
                 ?>
             </p>
         </div>
-<?php elseif (isset($_SESSION['delete-post'])) : // if edit post is not successful
+<?php elseif (isset($_SESSION['delete-post'])) : // if delete post is not successful
     ?>
         <div class="alert__message error container">
             <p>
