@@ -11,7 +11,7 @@ $body = $_SESSION['add-post-data']['body'] ?? null;
 unset($_SESSION['add-post-data']);
 ?>
 
-<section class="form__section poster">
+<section class="form__section">
     <div class="container form__section-container">
         <h2>Add Post</h2>
         <?php if (isset($_SESSION['add-post'])) : ?>

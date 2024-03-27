@@ -1,5 +1,6 @@
 <?php
 include 'partials/header.php';
+include 'partials/extra.php';
 
 $firstname = $_SESSION['add-user-data']['firstname'] ?? null;
 $lastname = $_SESSION['add-user-data']['lastname'] ?? null;
@@ -11,7 +12,7 @@ unset($_SESSION['add-user-data']);
 
 ?>
 
-<section class="form__section poster" >
+<section class="form__section">
     <div class="container form__section-container">
         <h2>Add User</h2>
         <?php if(isset($_SESSION['add-user'])) : ?>

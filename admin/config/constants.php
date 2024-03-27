@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-define('ROOT_URL', 'http://localhost/ReadyProject/Blog/');
+define('ROOT_URL', 'http://localhost/ReadyProject/');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'swatwa');
 define('DB_PASS', 'admin1234');
