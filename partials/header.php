@@ -14,9 +14,9 @@ if(isset($_SESSION['user-id'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SWAT Blog</title>
+    <title>Swatwa Blog</title>
     <!-- linking to stylesheet -->
-    <link rel="stylesheet" href="<?= ROOT_URL ?>css/style2.css">
+    <link rel="stylesheet" href="<?= ROOT_URL ?>css/style.css">
     <!-- ------------------- font awesome -----------------  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
     <!-- ------------------- GOOGLE FONTS ---------------- -->
@@ -26,12 +26,12 @@ if(isset($_SESSION['user-id'])) {
     <!-- ---------------- Navigation Panel ------------------------ -->
     <nav>
         <div class="container nav__container">
-            <a href="<?= ROOT_URL?>index.php" class="nav__logo">S.W.A.T blog</a>
+            <a href="<?= ROOT_URL?>index.php" class="nav__logo">SWATWA</a>
             <ul class="nav__items">
                 <li><a href="<?= ROOT_URL ?>blog.php">Blog</a></li>
                 <li><a href="<?= ROOT_URL ?>about.php">About</a></li>
                 <li><a href="<?= ROOT_URL ?>service.php">Services</a></li>
-                <li><a href="..\index.html#contact" target="_blank">Contact</a></li>
+                <li><a href="" target="_blank">Contact</a></li>
                 <?php if(isset($_SESSION['user-id'])) : ?>
                     <li class="nav__profile">
                     <div class="avatar">

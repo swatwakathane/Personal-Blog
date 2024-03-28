@@ -15,7 +15,7 @@ unset($_SESSION['signin-data']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SWAT Blog</title>
     <!-- linking to stylesheet -->
-    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="<?= ROOT_URL ?>css/style.css">
     <!-- ------------------- font awesome -----------------  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
     <!-- ------------------- GOOGLE FONTS ---------------- -->
@@ -47,7 +47,7 @@ unset($_SESSION['signin-data']);
             <input type="text" name="username_email" value="<?= $username_email ?>" placeholder="Username or Email">
             <input type="password" name="password" value="<?= $password ?>" placeholder="Password">
             <button type="submit" name="submit" class="btn">Sign In</button>
-            <small>Dont have an Account! <a href="signup.php">Sign Up</a></small>
+            <small>Dont have an Account! <a href="<?= ROOT_URL ?>signup.php" target="_blank">Sign Up</a></small>
         </form>
     </div>
 </section>

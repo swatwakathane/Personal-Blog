@@ -1,7 +1,7 @@
 
 /* ---------------------------- ROOT VARIABLES ---------------------------- */
 
-:root {--color-primary: #6f6af8;
+:root {--color-primary: #5e59fa;
     --color-primary-light: hsl(242, 91%, 69%, 18%);
     --color-primary-variant: #5854c7;
     --color-red: #da0f3f;
@@ -25,7 +25,7 @@
     --card-border-radius-2: 0.5rem;
     --card-border-radius-3: 0.8rem;
     --card-border-radius-4: 2rem;
-    --card-border-radius-5: 4rem;
+    --card-border-radius-5: 1.5rem;
 }
 
 /* ------------------------- GENERAL --------------------- */
@@ -201,7 +201,7 @@ nav button {
 
 .post__thumbnail {
     border-radius: var(--card-border-radius-5);
-    border: 1rem solid var(--color-gray-900);
+    border: 0.8rem solid var(--color-gray-900);
     overflow: hidden;
     margin-bottom: 1.6rem;
 }
@@ -233,7 +233,6 @@ nav button {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-
 }
 
 .featured .post__thumbnail {
@@ -248,7 +247,6 @@ nav button {
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
     margin-bottom: 5rem;
-
 }
 
 /* --------------------------------------------------- CATEGORY BUTTONS ------------------------------------- */
@@ -270,7 +268,7 @@ nav button {
 
 footer {
     background: var(--color-gray-900);
-    padding: 5rem 0 0;
+    padding: 3rem 0 0;
     box-shadow: inset 0 1.5rem 1.5rem rgba(0, 0, 0, 0.2);
 }
 
@@ -428,9 +426,26 @@ footer ul a:hover {
  /* ---------------------------------------- ABOUT PAGE ----------------------------------- */
 
 .empty__page {
-    height: 30rem;
+    height: 12rem;
     display: grid;
     place-items: center;
+}
+
+.empty__page h3 {
+    margin-top: 4rem;
+    font-size: 30px;
+}
+.about__message {
+    margin: 0 5%;
+    margin-bottom: 5rem;
+    width: 90%;
+}
+
+.about__message b {
+    color: white;
+}
+.about__message a:hover {
+    letter-spacing: 1mm;
 }
 
  /* ---------------------------------------- SIGN UP ----------------------------------- */
