@@ -32,7 +32,7 @@ include 'partials/header.php'
         reviews and updates, documents are generated in a fully automated manner and therefore do not constitute or 
         substitute the rendering of legal advice, nor does any assistance and customer support provided by me 
         establish a relationship. This is why, despite all efforts in offering the best possible 
-        service, Swatwa Kathane cannot guarantee generated documents to be fully compliant with applicable law. Users should 
+        service, Swatwa Kathane cannot guarantee that generated documents be fully compliant with applicable law. Users should 
         therefore not rely upon documents 
         generated without seeking legal advice from an attorney licensed in the relevant jurisdiction(s).
         </p>
