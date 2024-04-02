@@ -113,8 +113,8 @@ $categories = mysqli_query($connection, $query);
                         <?php while ($category = mysqli_fetch_assoc($categories)) : ?>
                             <tr>
                                 <td><?= $category['title'] ?></td>
-                                <td><a href="<?= ROOT_URL ?>admin/edit-category.php?id=<?= $category['id'] ?>" class="btn sm">Edit</a></td>
-                                <td><a href="<?= ROOT_URL ?>admin/delete-category.php?id=<?= $category['id'] ?>" class="btn sm danger">Delete</a></td>
+                                <td><a href="edit-category.php?id=<?= $category['id'] ?>" class="btn sm">Edit</a></td>
+                                <td><a href="delete-category.php?id=<?= $category['id'] ?>" class="btn sm danger">Delete</a></td>
                             </tr>
                         <?php endwhile ?>
                     </tbody>
@@ -126,7 +126,7 @@ $categories = mysqli_query($connection, $query);
     </div>
 </section>
 
-
+<script src="../js/main.js"></script>
 <?php
 include '../partials/footer.php';
 ?>

@@ -23,7 +23,7 @@ unset($_SESSION['add-user-data']);
                 </p>
             </div>
         <?php endif ?>
-        <form action="<?= ROOT_URL ?>admin/add-user-logic.php" enctype="multipart/form-data" method="POST">
+        <form action="add-user-logic.php" enctype="multipart/form-data" method="POST">
             <input type="text" name="firstname" value="<?= $firstname ?>" placeholder="First Name">
             <input type="text" name="lastname" value="<?= $lastname ?>" placeholder="Last Name">
             <input type="text" name="username" value="<?= $username ?>" placeholder="Username">
@@ -45,7 +45,7 @@ unset($_SESSION['add-user-data']);
 
 
 
-<script src="<?= ROOT_URL ?>js/main.js"></script>
+<script src="../js/main.js"></script>
 
 </body>
 </html>

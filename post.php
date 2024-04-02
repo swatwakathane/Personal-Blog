@@ -8,7 +8,7 @@ if (isset($_GET['id'])) {
     $result = mysqli_query($connection, $query);
     $post = mysqli_fetch_assoc($result);
 } else {
-    header('location: ' . ROOT_URL . 'blog.php');
+    header('location: ' . 'blog.php');
     die();
 }
 ?>

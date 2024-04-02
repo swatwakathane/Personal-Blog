@@ -18,7 +18,7 @@ unset($_SESSION['signup-data']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SWAT Blog</title>
     <!-- linking to stylesheet -->
-    <link rel="stylesheet" href="<?= ROOT_URL ?>css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- ------------------- font awesome -----------------  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
     <!-- ------------------- GOOGLE FONTS ---------------- -->
@@ -38,7 +38,7 @@ unset($_SESSION['signup-data']);
                 </p>
             </div>
         <?php endif ?>
-        <form action="<?= ROOT_URL ?>signup-logic.php" enctype="multipart/form-data" method="POST">
+        <form action="signup-logic.php" enctype="multipart/form-data" method="POST">
             <input type="text" name="firstname" value="<?= $firstname ?>" placeholder="First Name">
             <input type="text" name="lastname" value="<?= $lastname ?>" placeholder="Last Name">
             <input type="text" name="username" value="<?= $username ?>" placeholder="Username">
@@ -50,7 +50,7 @@ unset($_SESSION['signup-data']);
                 <input type="file" name="avatar" id="avatar">
             </div>
             <button type="submit" name="submit" class="btn">Sign Up</button>
-            <small>Already have an account? <a href="<?= ROOT_URL ?>signin.php">Sign In</a></small>
+            <small>Already have an account? <a href="signin.php">Sign In</a></small>
         </form>
     </div>
 </section>

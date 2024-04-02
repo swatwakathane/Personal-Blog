@@ -19,7 +19,7 @@ unset($_SESSION['add-category-data']);
                 </p>
             </div>
         <?php endif ?>
-        <form action="<?= ROOT_URL ?>admin/add-category-logic.php" method="POST">
+        <form action="add-category-logic.php" method="POST">
             <input type="text" name="title" value="<?= $title ?>" placeholder="Title of Category">
             <textarea rows="4" name="description" placeholder="Description"><?= $description ?></textarea>
             <button type="submit" name="submit" class="btn">Add Category</button>
@@ -27,7 +27,7 @@ unset($_SESSION['add-category-data']);
     </div>
 </section>
 
-
+<script src="../js/main.js"></script>
 <?php
 include '../partials/footer.php';
 ?>

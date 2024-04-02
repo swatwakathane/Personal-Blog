@@ -2,5 +2,5 @@
 require 'config/constants.php';
 // destroying all sessions
 session_destroy();
-header('location: ' . ROOT_URL );
+header('location: ' . 'index.php' );
 die();

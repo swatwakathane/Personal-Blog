@@ -7,7 +7,7 @@ if (isset($_GET['id'])) {
     $query = "SELECT * FROM posts WHERE category_id=$id ORDER BY date_time DESC";
     $posts = mysqli_query($connection, $query);
 } else {
-    header('location: ' . ROOT_URL . 'blog.php');
+    header('location: ' . 'blog.php');
     die();
 }
 ?>
@@ -38,7 +38,7 @@ if (isset($_GET['id'])) {
                     <img src="./images/<?= $post['thumbnail'] ?>">
                 </div>
                 <div class="post__info">
-                    <h3 class="post__title"><a href="<?= ROOT_URL ?>post.php?id=<?= $post['id'] ?>"><?= $post['title'] ?></a></h3>
+                    <h3 class="post__title"><a href="post.php?id=<?= $post['id'] ?>"><?= $post['title'] ?></a></h3>
                     <p class="post__body"><?= substr($post['body'], 0, 200) ?>. . . </p>
                     <div class="post__author">
                         <?php
@@ -77,7 +77,7 @@ if (isset($_GET['id'])) {
         $result = mysqli_query($connection, $all_categories);
         ?>
         <?php while ($list_category = mysqli_fetch_assoc($result)) : ?>
-            <a href="<?= ROOT_URL ?>category-posts.php?id=<?= $list_category['id'] ?>" class="category__button"><?= $list_category['title'] ?></a>
+            <a href="category-posts.php?id=<?= $list_category['id'] ?>" class="category__button"><?= $list_category['title'] ?></a>
         <?php endwhile ?>
     </div>
 </section>

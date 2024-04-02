@@ -69,7 +69,7 @@ if(isset($_POST['submit'])){
     // redirect if any error occurs
      if($_SESSION['signup']){
         $_SESSION['signup-data'] = $_POST;
-        header('location: ' . ROOT_URL . 'signup.php');
+        header('location: ' . 'signup.php');
         die();
      } else {
         $inset_user_query = "INSERT INTO users SET firstname='$firstname', lastname='$lastname', username='$username',
@@ -80,13 +80,13 @@ if(isset($_POST['submit'])){
      if (!mysqli_errno($connection)) {
         // redirect to login page
         $_SESSION['signup-success'] = "Registration successful, Please log in!";
-        header('location: ' . ROOT_URL . 'signin.php');
+        header('location: ' . 'signin.php');
         die();
      }
 
 }
 else{
     // if button is not set the bounce back to signup page
-    header('location: ' . ROOT_URL . 'signup.php');
+    header('location: ' . 'signup.php');
     die();
 }

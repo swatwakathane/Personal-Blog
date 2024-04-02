@@ -70,7 +70,7 @@ if(isset($_POST['submit'])){
     // redirect if any error occurs
      if($_SESSION['add-user']){
         $_SESSION['add-user-data'] = $_POST;
-        header('location: ' . ROOT_URL . 'admin/add-user.php');
+        header('location: ' . 'add-user.php');
         die();
      } else {
         // insert new user into database table
@@ -82,13 +82,13 @@ if(isset($_POST['submit'])){
      if (!mysqli_errno($connection)) {
         // redirect to login page
         $_SESSION['add-user-success'] = "User, $firstname added Successfully!";
-        header('location: ' . ROOT_URL . 'admin/manage-users.php');
+        header('location: ' . 'manage-users.php');
         die();
      }
 
 }
 else{
     // if button is not set the bounce back to signup page
-    header('location: ' . ROOT_URL . 'admin/add-user.php');
+    header('location: ' . 'add-user.php');
     die();
 }

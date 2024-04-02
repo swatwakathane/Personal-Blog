@@ -695,7 +695,6 @@ input, textarea, select {
 
     .featured__container {
         gap: 3rem;
-        margin: 3rem;
     }
 
     .posts__container {

@@ -11,7 +11,7 @@ if (isset($_GET['id'])) {
         $result = mysqli_fetch_assoc($category);
     }
 } else {
-    header('location: ' . ROOT_URL . 'admin/manage-categories.php');
+    header('location: ' . 'manage-categories.php');
     die();
 }
 ?>
@@ -19,7 +19,7 @@ if (isset($_GET['id'])) {
     <div class="container form__section-container">
         <h2>Edit Category</h2>
 
-        <form action="<?= ROOT_URL ?>admin/edit-category-logic.php" method="POST">
+        <form action="edit-category-logic.php" method="POST">
             <input type="hidden" name="id" value="<?= $result['id'] ?>">
             <input type="text" name="title" value="<?= $result['title'] ?>" placeholder="Title of Category">
             <textarea rows="4" name="description" placeholder="Description"><?= $result['description'] ?></textarea>
@@ -28,7 +28,7 @@ if (isset($_GET['id'])) {
     </div>
 </section>
 
-
+<script src="../js/main.js"></script>
 <?php
 include '../partials/footer.php';
 ?>

@@ -29,5 +29,5 @@ if(isset($_GET['id'])) {
     }
 }
 
-header('location: ' . ROOT_URL . 'admin/');
+header('location: ' . 'index.php');
 die();

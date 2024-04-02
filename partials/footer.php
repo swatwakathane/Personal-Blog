@@ -16,7 +16,7 @@
             ?>
             <ul>
                 <?php while ($list_category = mysqli_fetch_assoc($result)) : ?>
-                    <li><a href="<?= ROOT_URL ?>category-posts.php?id=<?= $list_category['id'] ?>"><?= $list_category['title'] ?></a></li>
+                    <li><a href="category-posts.php?id=<?= $list_category['id'] ?>"><?= $list_category['title'] ?></a></li>
                 <?php endwhile ?>
             </ul>
         </article>
@@ -59,7 +59,7 @@
 </footer>
 
 
-<script src="<?= ROOT_URL ?>js/main.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 

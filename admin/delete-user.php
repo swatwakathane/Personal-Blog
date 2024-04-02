@@ -44,5 +44,5 @@ if (isset($_GET['id'])) {
     }
 }
 
-header('location: ' . ROOT_URL . 'admin/manage-users.php');
+header('location: ' . 'manage-users.php');
 die();

@@ -117,8 +117,8 @@ $posts = mysqli_query($connection, $query);
                     <tr>
                         <td><?= $post['title'] ?></td>
                         <td><?= $category['title'] ?></td>
-                        <td><a href="<?= ROOT_URL ?>admin/edit-post.php?id=<?= $post['id']?>" class="btn sm">Edit</a></td>
-                        <td><a href="<?= ROOT_URL ?>admin/delete-post.php?id=<?= $post['id']?>" class="btn sm danger">Delete</a></td>
+                        <td><a href="edit-post.php?id=<?= $post['id']?>" class="btn sm">Edit</a></td>
+                        <td><a href="delete-post.php?id=<?= $post['id']?>" class="btn sm danger">Delete</a></td>
                     </tr>
                     <?php endwhile ?>
                 </tbody>
@@ -130,7 +130,7 @@ $posts = mysqli_query($connection, $query);
     </div>
 </section>
 
-
+<script src="../js/main.js"></script>
 <?php
 include '../partials/footer.php';
 ?>

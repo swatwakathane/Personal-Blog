@@ -103,8 +103,8 @@ $users = mysqli_query($connection, $query);
                     <tr>
                         <td><?= "{$user['firstname']} {$user['lastname']}" ?></td>
                         <td><?= $user['username'] ?></td>
-                        <td><a href="<?= ROOT_URL ?>admin/edit-user.php?id=<?= $user['id'] ?>" class="btn sm">Edit</a></td>
-                        <td><a href="<?= ROOT_URL ?>admin/delete-user.php?id=<?= $user['id'] ?>" class="btn sm danger">Delete</a></td>
+                        <td><a href="edit-user.php?id=<?= $user['id'] ?>" class="btn sm">Edit</a></td>
+                        <td><a href="delete-user.php?id=<?= $user['id'] ?>" class="btn sm danger">Delete</a></td>
                         <td><?= $user['is_admin'] ? 'Yes' : 'No' ?></td>
                     </tr>
                     <?php endwhile ?>
@@ -118,7 +118,7 @@ $users = mysqli_query($connection, $query);
 </section>
 
 
-
+<script src="../js/main.js"></script>
 <?php
 include '../partials/footer.php';
 ?>

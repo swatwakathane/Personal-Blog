@@ -31,7 +31,7 @@ if(isset($_POST['submit']) ) {
                 }
 
                 // login user
-                header('location: ' . ROOT_URL . 'admin/' );
+                header('location: ' . 'admin/' );
             } else {
                 $_SESSION['signin'] = "Wrong Password!";
             }
@@ -43,11 +43,11 @@ if(isset($_POST['submit']) ) {
     // if any problem occurs
     if(isset($_SESSION['signin'])) {
         $_SESSION['signin-data'] = $_POST;
-        header('location: ' . ROOT_URL . 'signin.php');
+        header('location: ' . 'signin.php');
         die();
     }
 
 } else {
-    header('location: ' . ROOT_URL . 'signup.php');
+    header('location: ' . 'signup.php');
     die();
 }

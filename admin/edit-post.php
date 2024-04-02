@@ -12,7 +12,7 @@ if(isset($_GET['id'])) {
     $result = mysqli_query($connection, $query);
     $post = mysqli_fetch_assoc($result);
 } else {
-    header('location: ' . ROOT_URL . 'admin/');
+    header('location: ' . 'index.php');
     die();
 }
 ?>
@@ -20,7 +20,7 @@ if(isset($_GET['id'])) {
 <section class="form__section poster">
     <div class="container form__section-container">
         <h2>Edit Post</h2>
-        <form action="<?= ROOT_URL ?>admin/edit-post-logic.php" enctype="multipart/form-data" method="POST">
+        <form action="edit-post-logic.php" enctype="multipart/form-data" method="POST">
             <input type="hidden" value="<?= $post['id'] ?>" name="id">
             <input type="hidden" value="<?= $post['thumbnail'] ?>" name="previous_thumbnail_name">
             <input type="text" value="<?= $post['title'] ?>" name="title" placeholder="Title">
@@ -43,7 +43,7 @@ if(isset($_GET['id'])) {
     </div>
 </section>
 
-
+<script src="../js/main.js"></script>
 <?php
 include '../partials/footer.php';
 ?>

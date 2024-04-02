@@ -13,7 +13,7 @@ if(isset($_POST['submit'])) {
 
     if(isset($_SESSION['add-category'])) {
         $_SESSION['add-category-data'] = $_POST;
-        header('location: ' . ROOT_URL . 'admin/add-category.php');
+        header('location: ' . 'add-category.php');
         die();
     } else {
         // insert category into database
@@ -21,11 +21,11 @@ if(isset($_POST['submit'])) {
         $result = mysqli_query($connection, $query);
         if(mysqli_errno($connection)) {
             $_SESSION['add-category'] = "Category is not added, Please retry";
-            header('location: '. ROOT_URL . 'admin/add-category.php');
+            header('location: '. 'add-category.php');
             die();
         } else {
             $_SESSION['add-category-success'] = "$title category  added successfully";
-            header('location: '. ROOT_URL . 'admin/manage-categories.php');
+            header('location: '. 'manage-categories.php');
             die();
         }
     }

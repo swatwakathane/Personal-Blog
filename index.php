@@ -26,8 +26,8 @@ $posts = mysqli_query($connection, $query);
                 $category_result = mysqli_query($connection, $category_query);
                 $category = mysqli_fetch_assoc($category_result);
                 ?>
-                <a href="<?= ROOT_URL ?>category-posts.php?id=<?= $featured['category_id'] ?>" class="category__button"><?= $category['title'] ?></a>
-                <h2 class="post__title"><a href="<?= ROOT_URL ?>post.php?id=<?= $featured['id'] ?>"><?= $featured['title'] ?></a></h2>
+                <a href="category-posts.php?id=<?= $featured['category_id'] ?>" class="category__button"><?= $category['title'] ?></a>
+                <h2 class="post__title"><a href="post.php?id=<?= $featured['id'] ?>"><?= $featured['title'] ?></a></h2>
                 <p class="post__body"><?= substr($featured['body'], 0, 300) ?>. . . </p>
                 <div class="post__author">
                     <?php
@@ -65,8 +65,8 @@ $posts = mysqli_query($connection, $query);
                     $category_result = mysqli_query($connection, $category_query);
                     $category = mysqli_fetch_assoc($category_result);
                     ?>
-                    <a href="<?= ROOT_URL ?>category-posts.php?id=<?= $post['category_id'] ?>" class="category__button"><?= $category['title'] ?></a>
-                    <h3 class="post__title"><a href="<?= ROOT_URL ?>post.php?id=<?= $post['id'] ?>"><?= $post['title'] ?></a></h3>
+                    <a href="category-posts.php?id=<?= $post['category_id'] ?>" class="category__button"><?= $category['title'] ?></a>
+                    <h3 class="post__title"><a href="post.php?id=<?= $post['id'] ?>"><?= $post['title'] ?></a></h3>
                     <p class="post__body"><?= substr($post['body'], 0, 200) ?>. . . </p>
                     <div class="post__author">
                         <?php
@@ -96,7 +96,7 @@ $posts = mysqli_query($connection, $query);
         $result = mysqli_query($connection, $all_categories);
         ?>
         <?php while ($list_category = mysqli_fetch_assoc($result)) : ?>
-            <a href="<?= ROOT_URL ?>category-posts.php?id=<?= $list_category['id'] ?>" class="category__button"><?= $list_category['title'] ?></a>
+            <a href="category-posts.php?id=<?= $list_category['id'] ?>" class="category__button"><?= $list_category['title'] ?></a>
         <?php endwhile ?>
     </div>
 </section>

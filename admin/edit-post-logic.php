@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
     }
 
     if (isset($_SESSION['edit-post'])) {
-        header('location: ' . ROOT_URL . 'admin/');
+        header('location: ' . 'index.php');
         die();
     } else {
         if ($is_featured == 1) {
@@ -73,5 +73,5 @@ if (isset($_POST['submit'])) {
     }
 }
 
-header('location: ' . ROOT_URL . 'admin/');
+header('location: ' . 'index.php');
 die();

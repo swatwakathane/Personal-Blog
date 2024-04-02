@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
 
     if (isset($_SESSION['add-post'])) {
         $_SESSION['add-post-data'] = $_POST;
-        header('location: ' . ROOT_URL . 'admin/add-post.php');
+        header('location: ' . 'add-post.php');
         die();
     } else {
         if ($is_featured == 1) {
@@ -60,11 +60,11 @@ if (isset($_POST['submit'])) {
 
         if (!mysqli_errno($connection)) {
             $_SESSION['add-post-success'] = "New Blog added successfully";
-            header('location: ' . ROOT_URL . 'admin/');
+            header('location: ' . 'index.php');
             die();
         }
     }
 }
 
-header('location: ' . ROOT_URL . 'admin/add-post.php');
+header('location: ' . 'add-post.php');
 die();

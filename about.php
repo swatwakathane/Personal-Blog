@@ -17,7 +17,7 @@ include 'partials/header.php'
         <p><a href="">Check out my Portfolio.</a></p>
         <br>
         <p>
-        <p><b>Tech Stack :</b></p>
+        <p><b>My Tech Stack :</b></p>
         <p>Frontend - CSS, Javascript, React.</p>
         <p>Backend - PHP, Java, Typescript, Node.js</p>
         <p>Database - MySQL, MongoDB, Firebase</p>
