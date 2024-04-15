@@ -412,6 +412,14 @@ footer ul a:hover {
     margin: 1.5rem 0 1rem;
 }
 
+.post__body {
+    text-align: justify;
+}
+
+.singlepost__container p {
+    text-align: justify;
+}
+
  /* ---------------------------------------- CATEGORY POST BODY ----------------------------------- */
 
 
