@@ -35,8 +35,7 @@ if(!isset($_SESSION['user-id'])) {
             <ul class="nav__items">
                 <li><a href="../blog.php">Blog</a></li>
                 <li><a href="../about.php">About</a></li>
-                <li><a href="../service.php">Services</a></li>
-                <li><a href="" target="_blank">Contact</a></li>
+                <li><a href="https://swatwakathane.info#contact" target="_blank">Contact</a></li>
                 <?php if(isset($_SESSION['user-id'])) : ?>
                     <li class="nav__profile">
                     <div class="avatar">

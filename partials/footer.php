@@ -24,21 +24,20 @@
         <article>
             <h4>Support</h4>
             <ul>
-                <li><a href="mailto:swatwakathane@gmail.com">Online support</a></li>
                 <li><a href="mailto:swatwakathane@gmail.com">Email</a></li>
                 <li><a href="https://www.linkedin.com/in/swatwa-kathane/">Social Support</a></li>
-                <li><a href="">Location</a></li>
-                <li><a href="">Custom Message</a></li>
+                <li><a href="./service.php">Location</a></li>
+                <li><a href="./service.php">Custom Message</a></li>
             </ul>
         </article>
 
         <article>
             <h4>Blog</h4>
             <ul>
-                <li><a href="">Safety</a></li>
-                <li><a href="">Repair</a></li>
-                <li><a href="">Categories</a></li>
-                <li><a href="">Services</a></li>
+                <li><a href="./service.php">Safety</a></li>
+                <li><a href="./service.php">Repair</a></li>
+                <li><a href="./service.php">Categories</a></li>
+                <li><a href="./service.php">Services</a></li>
             </ul>
         </article>
 
@@ -48,13 +47,12 @@
                 <li><a href="./index.php">Home</a></li>
                 <li><a href="./blog.php">Blog</a></li>
                 <li><a href="./about.php">About</a></li>
-                <li><a href="./service.php">Services</a></li>
-                <li><a href="./contact.php">Contact</a></li>
+                <li><a href="https://swatwakathane.info#contact" target="_blank">Contact</a></li>
             </ul>
         </article>
     </div>
     <div class="footer__copyright">
-        <small>Copyright &copy; SWATWA Blog - Swatwa Kathane</small>
+        <small>Copyright &copy; 2024 SWATWA Blog - Swatwa Kathane</small>
     </div>
 </footer>
 
